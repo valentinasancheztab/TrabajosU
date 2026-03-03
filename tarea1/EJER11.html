@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+</head>
+<body>
+
+      <!-- Título principal de la página -->
+    <h1>Registro en nuestra tienda</h1>
+
+    <!-- Inicio del formulario -->
+    <!-- action="#" significa que no enviará a ningún servidor -->
+    <!-- method="post" indica que los datos se enviarán de forma segura -->
+    <form action="#" method="post">
+
+        <!-- Campo Nombre de usuario -->
+        <label for="usuario">Nombre de usuario</label><br>
+        <!-- 
+            type="text" → campo de texto
+            id="usuario" → identificador único
+            name="usuario" → nombre con el que se enviará el dato
+            placeholder → texto de ejemplo dentro del campo
+        -->
+        <input type="text" id="usuario" name="usuario" placeholder="Ej: luis">
+        <br><br>
+
+        <!-- Campo Email -->
+        <label for="email">Email:</label><br>
+        <!-- type="email" valida que el formato sea correcto -->
+        <input type="email" id="email" name="email" placeholder="Ej: luis@gmail.com">
+        <br><br>
+
+        <!-- Campo Edad -->
+        <label for="edad">Edad:</label><br>
+        <!-- type="number" permite solo números -->
+        <input type="number" id="edad" name="edad" placeholder="Ej: 21">
+        <br><br>
+
+        <!-- Opciones de género -->
+        <label>Género:</label><br>
+
+        <!-- 
+            type="radio" crea botones circulares
+            Todos tienen el mismo name="genero" 
+            para que solo se pueda seleccionar uno
+        -->
+        <input type="radio" id="masculino" name="genero" value="masculino">
+        <label for="masculino">Masculino</label><br>
+
+        <input type="radio" id="femenino" name="genero" value="femenino">
+        <label for="femenino">Femenino</label>
+        <br><br>
+
+        <!-- Lista desplegable -->
+        <label for="recomendado">Recomendado por:</label><br>
+
+        <!-- select crea el menú desplegable -->
+        <select id="recomendado" name="recomendado">
+            <!-- option son las opciones disponibles -->
+            <option value="google">Google</option>
+            <option value="facebook">Facebook</option>
+            <option value="instagram">Instagram</option>
+            <option value="amigo">Un amigo</option>
+        </select>
+        <br><br>
+
+        <!-- Área de comentarios -->
+        <label for="comentarios">Comentarios:</label><br>
+
+        <!-- 
+            textarea permite texto largo
+            rows = número de filas
+            cols = ancho del área
+        -->
+        <textarea id="comentarios" name="comentarios" rows="4" cols="30"></textarea>
+        <br><br>
+
+        <!-- Casilla de aceptación -->
+        <!-- type="checkbox" permite marcar o desmarcar -->
+        <label>
+            <input type="checkbox" name="terminos">
+            Acepto términos y condiciones
+        </label>
+        <br><br>
+
+        <!-- Botón para enviar el formulario -->
+        <!-- type="submit" envía los datos -->
+        <input type="submit" value="Registrar">
+
+    </form>
+    <!-- Fin del formulario -->
+
+</body>
+</html>
